@@ -1,0 +1,19 @@
+name: Validate pet package
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Validate package and installer
+        shell: powershell
+        run: .\tests\Test-Package.ps1

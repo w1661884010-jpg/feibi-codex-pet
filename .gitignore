@@ -1,0 +1,22 @@
+# Operating system and editor files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+
+# PowerShell and test artifacts
+*.log
+TestResults/
+coverage/
+
+# Local backups and temporary files
+*.bak
+*.tmp
+*.temp
+*.zip
+backup-*/
+
