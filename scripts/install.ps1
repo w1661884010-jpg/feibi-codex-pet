@@ -81,9 +81,11 @@ function Test-SourcePackage {
 
     try { $manifest = Get-Content -Raw -LiteralPath $manifestPath -Encoding UTF8 | ConvertFrom-Json }
     catch { throw "pet.json is not valid UTF-8 JSON: $($_.Exception.Message)" }
-    if ([string]$manifest.id -cne 'maomao') { throw 'pet.json id must be maomao.' }
+    if ([string]$manifest.id -cne 'feibi') { throw 'pet.json id must be feibi.' }
     $expectedDisplayName = [string]::Concat([char]0x83F2, [char]0x6BD4)
     if ([string]$manifest.displayName -cne $expectedDisplayName) { throw 'pet.json displayName does not match the expected name.' }
+    $expectedDescription = [string]::Concat([char]0x83F2, [char]0x6BD4, [char]0x557E, [char]0x6BD4, [char]0xFF01)
+    if ([string]$manifest.description -cne $expectedDescription) { throw 'pet.json description does not match the expected description.' }
     if ([int]$manifest.spriteVersionNumber -ne 2) { throw 'pet.json spriteVersionNumber must be 2.' }
     if ([string]$manifest.spritesheetPath -cne 'spritesheet.webp') { throw 'pet.json spritesheetPath must be spritesheet.webp.' }
 
@@ -95,13 +97,13 @@ function Test-SourcePackage {
 
 $scriptDirectory = Split-Path -Parent $PSCommandPath
 $repoRoot = Get-NormalizedFullPath (Join-Path $scriptDirectory '..')
-$packageDirectory = Join-Path $repoRoot 'pet\maomao'
+$packageDirectory = Join-Path $repoRoot 'pet\feibi'
 Test-SourcePackage -PackageDirectory $packageDirectory
 
 $normalizedCodexHome = Get-NormalizedFullPath $CodexHome
 $petsDirectory = Get-NormalizedFullPath (Join-Path $normalizedCodexHome 'pets')
-$targetDirectory = Get-NormalizedFullPath (Join-Path $petsDirectory 'maomao')
-$expectedTarget = Get-NormalizedFullPath (Join-Path (Join-Path $normalizedCodexHome 'pets') 'maomao')
+$targetDirectory = Get-NormalizedFullPath (Join-Path $petsDirectory 'feibi')
+$expectedTarget = Get-NormalizedFullPath (Join-Path (Join-Path $normalizedCodexHome 'pets') 'feibi')
 if (-not [string]::Equals($targetDirectory, $expectedTarget, [StringComparison]::OrdinalIgnoreCase)) {
     throw "Refusing installation outside the expected destination: $targetDirectory"
 }
@@ -111,7 +113,7 @@ $backupDirectory = $null
 if (Test-Path -LiteralPath $targetDirectory) {
     Assert-NormalDirectory -Path $targetDirectory -Operation 'back up'
     $stamp = Get-Date -Format 'yyyyMMdd-HHmmssfff'
-    $backupDirectory = Join-Path $petsDirectory ("maomao.backup.$stamp")
+    $backupDirectory = Join-Path $petsDirectory ("feibi.backup.$stamp")
     Move-Item -LiteralPath $targetDirectory -Destination $backupDirectory
     Write-Host "Existing installation backed up to: $backupDirectory"
 }

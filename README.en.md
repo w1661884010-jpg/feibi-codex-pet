@@ -31,14 +31,14 @@ Clone this repository, open PowerShell in its root, and run:
 powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 ```
 
-The installer copies only Feibi's two runtime files to `%USERPROFILE%\.codex\pets\maomao`. If that pet already exists, it is preserved as a timestamped backup first.
+The installer copies only Feibi's two runtime files to `%USERPROFILE%\.codex\pets\feibi`. If that pet already exists, it is preserved as a timestamped backup first.
 
 Restart Codex Desktop after installation. If the pet list does not refresh immediately, restart the app or reopen the pet selector.
 
 ## Manual install
 
-1. Create `%USERPROFILE%\.codex\pets\maomao`.
-2. Copy `pet/maomao/pet.json` and `pet/maomao/spritesheet.webp` into it.
+1. Create `%USERPROFILE%\.codex\pets\feibi`.
+2. Copy `pet/feibi/pet.json` and `pet/feibi/spritesheet.webp` into it.
 3. Restart Codex Desktop and select “菲比” in the pet selector.
 
 ## Uninstall
@@ -47,7 +47,7 @@ Restart Codex Desktop after installation. If the pet list does not refresh immed
 powershell -ExecutionPolicy Bypass -File .\scripts\uninstall.ps1
 ```
 
-The uninstaller only handles `%USERPROFILE%\.codex\pets\maomao`; it does not modify other pets.
+The uninstaller only handles `%USERPROFILE%\.codex\pets\feibi`; it does not modify other pets.
 
 ## Click behavior and limitation
 
@@ -57,7 +57,7 @@ Clicking Feibi keeps Codex Desktop's native behavior: it opens and focuses the m
 
 ```text
 assets/          GitHub preview images and GIFs
-pet/maomao/      Installable pet.json and spritesheet.webp
+pet/feibi/      Installable pet.json and spritesheet.webp
 scripts/         Install and uninstall scripts
 tests/           Package and asset validation
 ```

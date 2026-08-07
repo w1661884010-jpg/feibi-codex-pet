@@ -22,7 +22,7 @@
 ### Task 1: Deterministic atlas repair
 
 **Files:**
-- Modify: `pet/maomao/spritesheet.webp`
+- Modify: `pet/feibi/spritesheet.webp`
 - Modify: `assets/preview-contact-sheet.png`
 - Modify: `assets/running-laptop.gif`
 - Modify: `assets/happy-bubble.gif` only if preview regeneration requires it

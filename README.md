@@ -31,16 +31,16 @@
 powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 ```
 
-安装器只会将菲比的两个运行文件安装到 `%USERPROFILE%\.codex\pets\maomao`。如已存在同名安装，脚本会先创建带时间戳的备份。
+安装器只会将菲比的两个运行文件安装到 `%USERPROFILE%\.codex\pets\feibi`。如已存在同名安装，脚本会先创建带时间戳的备份。
 
 安装后重启 Codex Desktop；如果桌宠列表没有立即更新，也请重启应用或重新打开桌宠选择器。
 
 ## 手动安装
 
-1. 创建目录 `%USERPROFILE%\.codex\pets\maomao`。
+1. 创建目录 `%USERPROFILE%\.codex\pets\feibi`。
 2. 将以下两个文件复制到该目录：
-   - `pet/maomao/pet.json`
-   - `pet/maomao/spritesheet.webp`
+   - `pet/feibi/pet.json`
+   - `pet/feibi/spritesheet.webp`
 3. 重启 Codex Desktop，并在桌宠选择器中选择“菲比”。
 
 ## 卸载
@@ -51,7 +51,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\install.ps1
 powershell -ExecutionPolicy Bypass -File .\scripts\uninstall.ps1
 ```
 
-卸载脚本仅处理 `%USERPROFILE%\.codex\pets\maomao`，不会改动其他桌宠。
+卸载脚本仅处理 `%USERPROFILE%\.codex\pets\feibi`，不会改动其他桌宠。
 
 ## 点击行为与限制
 
@@ -61,7 +61,7 @@ powershell -ExecutionPolicy Bypass -File .\scripts\uninstall.ps1
 
 ```text
 assets/          GitHub 预览图片与 GIF
-pet/maomao/      可安装的 pet.json 与 spritesheet.webp
+pet/feibi/      可安装的 pet.json 与 spritesheet.webp
 scripts/         安装与卸载脚本
 tests/           包结构与资源校验
 ```

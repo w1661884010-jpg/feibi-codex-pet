@@ -33,7 +33,7 @@ try {
     $fileTargetHome = Join-Path $tempRoot 'file-target\.codex'
     $fileTargetPets = Join-Path $fileTargetHome 'pets'
     New-Item -ItemType Directory -Path $fileTargetPets -Force | Out-Null
-    $fileTarget = Join-Path $fileTargetPets 'maomao'
+    $fileTarget = Join-Path $fileTargetPets 'feibi'
     Set-Content -LiteralPath $fileTarget -Value 'do not replace' -Encoding ASCII
     $fileTargetFailed = $false
     try { & $installScript -CodexHome $fileTargetHome }
@@ -42,18 +42,18 @@ try {
     Assert-True (Test-Path -LiteralPath $fileTarget -PathType Leaf) 'Installer changed the non-directory target.'
 
     & $installScript -CodexHome $fakeCodexHome
-    $target = Join-Path $fakeCodexHome 'pets\maomao'
+    $target = Join-Path $fakeCodexHome 'pets\feibi'
     Assert-True (Test-Path -LiteralPath (Join-Path $target 'pet.json') -PathType Leaf) 'pet.json was not installed.'
     Assert-True (Test-Path -LiteralPath (Join-Path $target 'spritesheet.webp') -PathType Leaf) 'spritesheet.webp was not installed.'
     Assert-True (@(Get-ChildItem -LiteralPath $target -File).Count -eq 2) 'Installer copied files other than the two package files.'
 
     & $installScript -CodexHome $fakeCodexHome
-    $backups = @(Get-ChildItem -LiteralPath (Join-Path $fakeCodexHome 'pets') -Directory | Where-Object { $_.Name -like 'maomao.backup.*' })
+    $backups = @(Get-ChildItem -LiteralPath (Join-Path $fakeCodexHome 'pets') -Directory | Where-Object { $_.Name -like 'feibi.backup.*' })
     Assert-True ($backups.Count -eq 1) 'Repeat install did not create exactly one backup.'
 
     & $uninstallScript -CodexHome $fakeCodexHome -RestoreBackup
     Assert-True (Test-Path -LiteralPath (Join-Path $target 'pet.json') -PathType Leaf) 'Backup restore did not recreate the installation.'
-    Assert-True (@(Get-ChildItem -LiteralPath (Join-Path $fakeCodexHome 'pets') -Directory | Where-Object { $_.Name -like 'maomao.backup.*' }).Count -eq 0) 'Restored backup was not consumed.'
+    Assert-True (@(Get-ChildItem -LiteralPath (Join-Path $fakeCodexHome 'pets') -Directory | Where-Object { $_.Name -like 'feibi.backup.*' }).Count -eq 0) 'Restored backup was not consumed.'
 
     & $uninstallScript -CodexHome $fakeCodexHome
     Assert-True (-not (Test-Path -LiteralPath $target)) 'Uninstall did not remove the exact target.'
