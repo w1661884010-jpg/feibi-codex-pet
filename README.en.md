@@ -13,7 +13,7 @@ Feibi is a chibi animated pet for Codex Desktop. She uses a soft, low-contrast p
 ## Features
 
 - Soft pastel, original-like chibi styling
-- Independently redrawn left-moving animation instead of a flipped right-moving row
+- Matching left/right running cadence: the left row is derived frame by frame from the approved right row and keeps the same two-eye three-quarter view
 - Laptop coding animation during an active task
 - Happy hover animation with a “菲比 / 啾比” speech bubble
 - 16 pointer-facing look directions

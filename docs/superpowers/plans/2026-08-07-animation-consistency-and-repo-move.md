@@ -1,6 +1,6 @@
 # Feibi Animation Consistency And Repository Move Implementation Plan
 
-> Superseded for `running-left` by version 1.0.2: the shipped row is now independently redrawn and is no longer a mirror of `running-right`.
+> Current in version 1.0.2: `running-left` again follows the frame-by-frame mirror rule below so its cadence and three-quarter view match `running-right`.
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
