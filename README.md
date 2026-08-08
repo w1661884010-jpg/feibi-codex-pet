@@ -6,13 +6,14 @@
 
 ![菲比状态总览](assets/preview-contact-sheet.png)
 
-| 任务进行中 | 开心气泡 |
-| --- | --- |
-| ![菲比抱着电脑敲代码](assets/running-laptop.gif) | ![菲比啾比漫画气泡](assets/happy-bubble.gif) |
+| 向左移动 | 任务进行中 | 开心气泡 |
+| --- | --- | --- |
+| ![菲比向左移动](assets/running-left.gif) | ![菲比抱着电脑敲代码](assets/running-laptop.gif) | ![菲比啾比漫画气泡](assets/happy-bubble.gif) |
 
 ## 功能
 
 - 柔和、简洁、贴近原图的奶油金与淡紫 Q 版造型
+- 独立重绘的向左移动动画，不使用向右动画翻转
 - 任务进行中抱着笔记本电脑敲代码
 - 鼠标悬停时开心跳动，并显示“菲比 / 啾比”漫画气泡
 - 16 个鼠标指针注视方向

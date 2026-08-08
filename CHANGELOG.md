@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 - 2026-08-08
+
+- Replaces the mirrored left-moving row with eight independently redrawn screen-left frames.
+- Preserves Feibi's original side-view hat, hair clip, long hair, palette, and asymmetric outfit details.
+- Updates the atlas contact sheet and adds a public left-moving animation preview.
+- Removes the obsolete mirror-rebuild maintenance script.
+
 ## 1.0.1 - 2026-08-07
 
 - Rebuilds the left-moving animation as a frame-by-frame horizontal mirror of the approved right-moving animation.
