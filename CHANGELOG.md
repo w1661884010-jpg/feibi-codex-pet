@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.0.2 - 2026-08-08
+
+- Replaces the overly side-on left-moving row with a frame-by-frame left-facing version of the approved right-running cadence.
+- Keeps both eyes visible in the same three-quarter running pose while preserving Feibi's hat, hair clip, long hair, palette, and outfit details.
+- Updates the atlas contact sheet and adds a public left-moving animation preview.
+- Adds a deterministic maintenance script for reproducing the corrected left-running row.
+
 ## 1.0.1 - 2026-08-07
 
 - Rebuilds the left-moving animation as a frame-by-frame horizontal mirror of the approved right-moving animation.

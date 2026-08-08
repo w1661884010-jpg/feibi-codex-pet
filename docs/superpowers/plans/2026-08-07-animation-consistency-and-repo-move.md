@@ -1,5 +1,7 @@
 # Feibi Animation Consistency And Repository Move Implementation Plan
 
+> Current in version 1.0.2: `running-left` again follows the frame-by-frame mirror rule below so its cadence and three-quarter view match `running-right`.
+
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
 **Goal:** Rebuild Feibi's affected atlas rows exclusively from approved existing frames, then place both independent repositories under one new parent directory in `learning`.
