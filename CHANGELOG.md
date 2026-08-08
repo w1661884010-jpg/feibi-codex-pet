@@ -1,5 +1,11 @@
 # Changelog
 
+## 1.0.3 - 2026-08-09
+
+- Finalizes the approved eight-frame left-moving animation while keeping Feibi's recognizable three-quarter running pose and character details.
+- Restores the selected six-frame seated idle loop with subtle breathing and a single natural blink; the neutral frame and all other animation rows remain unchanged.
+- Refreshes the public contact sheet, left-running preview, and package checksum for the validated stable atlas.
+
 ## 1.0.2 - 2026-08-08
 
 - Replaces the overly side-on left-moving row with a frame-by-frame left-facing version of the approved right-running cadence.
