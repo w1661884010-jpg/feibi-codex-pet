@@ -1,5 +1,11 @@
 # Changelog
 
+## Unreleased
+
+- Integrates the user-approved idle frame replacement, keeping idle frame 05 identical to frame 03.
+- Updates the 292.5°, 315°, and 337.5° upper-left look frames while preserving the approved standard animations.
+- Refreshes the public contact sheet and package checksum for the validated Codex v2 atlas.
+
 ## 1.0.3 - 2026-08-09
 
 - Finalizes the approved eight-frame left-moving animation while keeping Feibi's recognizable three-quarter running pose and character details.
